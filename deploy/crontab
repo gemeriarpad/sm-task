@@ -1,0 +1,4 @@
+# The Laravel scheduler (`crontab -u www-data deploy/crontab`, adjust the path):
+# the target resync (GITHUB_SYNC_SCHEDULE) and the scheduler and queue heartbeats
+# that the dashboard and /health report on.
+* * * * * cd /var/www/sm-task && php artisan schedule:run >> /dev/null 2>&1
